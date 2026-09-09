@@ -1,0 +1,6 @@
+[Unit]
+Description=Mansion Clock Chime
+
+[Service]
+Type=oneshot
+ExecStart=/home/mansionclock/modern/playchime.sh

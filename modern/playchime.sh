@@ -5,7 +5,9 @@ soundsdir='/home/mansionclock/modern/audio'
 hour_24=$(date +%-H)
 
 # Get the current hour in 12-hour format (1-12) to determine the chime count
+# Noon chimes 13 times.  ;)
 chime_count=$(date +%-I)
+[ "$chime_count" -eq 12 ] && chime_count=13
 
 # 1. Determine and play the correct intro music based on the hour
 case $hour_24 in
