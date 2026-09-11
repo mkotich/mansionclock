@@ -22,4 +22,4 @@ case $hour_24 in
 esac
 
 # 2. Seamlessly loop the single chime file matching the 12-hour count
-mpv --loop-file=$((chime_count - 1)) "$soundsdir/chime.mp3"
+mpv --ao=alsa --loop-file=$((chime_count - 1)) "$soundsdir/chime.mp3"
